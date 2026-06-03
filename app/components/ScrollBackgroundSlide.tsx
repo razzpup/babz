@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 // 1. Define your sections and background images
 const SECTIONS = [
@@ -25,8 +25,13 @@ const SECTIONS = [
   },
 ];
 
-// Separate component to handle each background with its own hook calls
-function BackgroundSection({ section, index, scrollYProgress }) {
+type Section = { id: number; title: string; description: string; image: string };
+
+function BackgroundSection({ section, index, scrollYProgress }: {
+  section: Section;
+  index: number;
+  scrollYProgress: MotionValue<number>;
+}) {
   const start = (index - 1) / (SECTIONS.length - 1);
   const center = index / (SECTIONS.length - 1);
   const end = (index + 1) / (SECTIONS.length - 1);
