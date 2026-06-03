@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #2E2E30;
+  --color-foreground: hsl(0 0% 98%);
+  --color-primary: #e71147;
+  --color-primary-foreground: hsl(0 0% 98%);
+  
+  --font-sans: var(--font-lato), var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@layer base {
+  *, ::after, ::before, ::placeholder, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-lato);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(160, 12, 48, 0.6);
+  }
+  .bg-purple-gradient {
+    background: linear-gradient(135deg, #3d3d3f 0%, #5c0617 100%);
+  }
+}
+
+@layer components {
+  /* Bloom Button Styles */
+  .bloom-button {
+    @apply border-none cursor-pointer bg-none p-0;
+  }
+
+  .bloom-button .bloom-container {
+    @apply relative transition-all duration-200 ease-in-out border-none bg-none;
+  }
+
+  .bloom-button .button-container-main {
+    width: 70px;
+    aspect-ratio: 1;
+    @apply rounded-full overflow-hidden relative grid place-content-center;
+    border-right: 3.75px solid white;
+    border-left: 3.75px solid rgba(128, 128, 128, 0.147);
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bloom-button .button-inner {
+    height: 38px;
+    aspect-ratio: 1;
+    @apply rounded-full relative;
+    box-shadow: rgba(100, 100, 111, 0.3) -7.5px 3.75px 7.5px 0px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bloom-button .button-inner .back {
+    @apply absolute inset-0 rounded-full;
+    background: linear-gradient(
+      60deg,
+      rgb(160, 12, 48) 0%,
+      rgb(160, 12, 48) 80%
+    );
+  }
+
+  .bloom-button .button-inner .front {
+    @apply absolute inset-1.25 rounded-full grid place-content-center transition-all duration-500 ease-in-out;
+    background: linear-gradient(
+      60deg,
+      rgb(168, 20, 56) 0%,
+      rgb(199, 25, 64) 100%
+    );
+  }
+
+  .bloom-button .button-inner .front .svg {
+    @apply fill-white w-7.5;
+    aspect-ratio: 1;
+    @apply opacity-50 transition-all duration-200 ease-in;
+    transform: rotate(45deg);
+  }
+
+  .bloom-button .button-glass {
+    @apply absolute inset-0 rounded-full;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    transform: translate(0%, 0%) rotate(0deg);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bloom-button .bloom {
+    height: 1px;
+    width: 1px;
+    @apply absolute bg-white;
+  }
+
+  .bloom-button .bloom1 {
+    top: 10px;
+    right: 20px;
+    box-shadow:
+      rgba(255, 255, 255, 0.619) 0px 0px 4px 4px,
+      rgba(255, 255, 255, 0.579) 0px 0px 8px 8px;
+  }
+
+  .bloom-button .bloom2 {
+    bottom: 10px;
+    left: 20px;
+    box-shadow:
+      rgba(255, 255, 255, 0.3) 0px 0px 6px 6px,
+      rgba(255, 255, 255, 0.3) 0px 0px 18px 12px;
+  }
+
+  .bloom-button .bloom-container:hover {
+    @apply scale-110;
+  }
+
+  .bloom-button .bloom-container:hover .button-inner .front {
+    @apply inset-0;
+    background: rgb(160, 12, 48);
+  }
+
+  .bloom-button .bloom-container:hover .button-inner .front .white-dot {
+    @apply opacity-0;
+  }
+
+  .bloom-button .bloom-container:active {
+    @apply scale-70;
+  }
+
+  .bloom-button .bloom-container:active .button-inner {
+    @apply scale-120;
+  }
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(160, 12, 48, 0.3);
+}
