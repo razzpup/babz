@@ -6,6 +6,7 @@ import { useState, useRef } from 'react';
 import { Archivo, Space_Grotesk, Lato } from 'next/font/google';
 import VideoPlayer from './components/VideoPlayer';
 import CoolButton from './components/CoolButton';
+import SpotifyMiniPlayer from './components/SpotifyMiniPlayer';
 import Image from 'next/image';
 
 const archivo = Archivo({ subsets: ["latin"], weight: ["400", "500", "700", "900"] });
@@ -238,7 +239,9 @@ export default function Home() {
                   <p className="text-white/40 text-sm font-bold mt-1">{video.views}</p>
                 </div>
               ))}
-              
+
+              <SpotifyMiniPlayer trackId="0m5DrGT4mIgJJfbZN7lpAX" />
+
               <a
                 href="/videos"
                 className="mt-auto flex items-center justify-center gap-3 px-8 py-4 bg-[#a00c30] hover:bg-[#c71940] text-white font-bold rounded-full group cursor-pointer transition-all shadow-lg hover:shadow-xl"
