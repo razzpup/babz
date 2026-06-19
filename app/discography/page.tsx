@@ -187,7 +187,7 @@ export default function DiscographyPage() {
                   alt="Artist Picture"
                   width={480}
                   height={480}
-                  className="w-full ml-28 lg:w-auto object-cover rounded-3xl shadow-2xl"
+                  className="w-full lg:w-auto lg:ml-28 object-cover rounded-3xl shadow-2xl"
                 />
               </div>
             </div>
