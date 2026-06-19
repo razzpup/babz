@@ -71,14 +71,14 @@ export default function Home() {
     
     <div className={`min-h-screen bg-background text-white selection:bg-red-900/30 ${spaceGrotesk.className}`}>
       <div className="hidden md:block fixed inset-0 z-0 pointer-events-none">
-  <motion.div style={{ opacity: heroOpacity }}    className="absolute inset-0 z-30 bg-[url('/bg2.webp')] bg-cover bg-position-[center_bottom_60%] grayscale-75" />
+  <motion.div style={{ opacity: heroOpacity }}    className="absolute inset-0 z-30 bg-[url('/bg2.jpg')] bg-contain bg-position-[center_bottom_60%] grayscale-75" />
   <motion.div style={{ opacity: skillOpacity }}   className="absolute inset-0 z-20 bg-[url('/bg4.jpg')] bg-cover bg-center grayscale-75" />
   <motion.div style={{ opacity: contactOpacity }} className="absolute inset-0 z-10 bg-[url('/bg3.jpg')] bg-cover bg-center grayscale-50" />
   {/* Overlay for consistent opacity */}
   <div className="absolute inset-0 bg-black/50 z-5" />
 </div>
 <div className="md:hidden fixed inset-0 z-0 pointer-events-none">
-  <motion.div style={{ opacity: heroOpacity }}    className="absolute inset-0 z-30 bg-[url('/bg2.webp')] bg-cover bg-position-[center_left_53%] grayscale-75" />
+  <motion.div style={{ opacity: heroOpacity }}    className="absolute inset-0 z-30 bg-[url('/bg2.jpg')] bg-cover bg-position-[center_left_53%] grayscale-75" />
   <motion.div style={{ opacity: skillOpacity }}   className="absolute inset-0 z-20 bg-[url('/bg4.jpg')] bg-cover bg-center grayscale-50" />
   <motion.div style={{ opacity: contactOpacity }} className="absolute inset-0 z-10 bg-[url('/bg3.jpg')] bg-cover bg-center grayscale-50" />
   {/* Overlay for consistent opacity */}
