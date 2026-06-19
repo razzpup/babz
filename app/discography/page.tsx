@@ -186,7 +186,7 @@ export default function DiscographyPage() {
               </div>
 
               {/* Right Album Cover */}
-              <div className="flex-1  shrink-0 w-full lg:w-auto max-w-xs lg:max-w-none">
+              <div className="flex-1  shrink-0 w-full  lg:w-auto max-w-xs lg:max-w-none">
                 <Image
                   src="/professional2.webp"
                   alt="Artist Picture"
