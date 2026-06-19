@@ -6,7 +6,7 @@ interface SpotifyMiniPlayerProps {
 export default function SpotifyMiniPlayer({ trackId, label = "LISTEN NOW" }: SpotifyMiniPlayerProps) {
   return (
     <div>
-      <p className="text-xs font-bold tracking-widest text-[#a00c30] mb-3">{label}</p>
+      <p className="text-xs font-bold tracking-widest text-[#ff4c61] mb-3">{label}</p>
       <div className="rounded-2xl bg-zinc-900 border border-white/5 overflow-hidden">
         <iframe
           title={`Spotify player: ${label}`}
