@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Space_Grotesk, Lato } from 'next/font/google';
 import CometCardDemo2 from '@/app/components/comet-card-demo2';
 import Link from 'next/link';
+import SpotifyMiniPlayer from '@/app/components/SpotifyMiniPlayer';
   
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["300", "400", "500"] });
@@ -150,6 +151,10 @@ export default function DiscographyPage() {
                   <span className="text-[#a00c30]">RELEASES</span>
                 </h2>
               </div>
+            </div>
+
+            <div className="max-w-md mb-16">
+              <SpotifyMiniPlayer trackId="0m5DrGT4mIgJJfbZN7lpAX" label="FEATURED SINGLE" />
             </div>
 
             <div>
