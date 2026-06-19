@@ -206,9 +206,6 @@ export default function DiscographyPage() {
               <a href="#" className="hover:text-[#a00c30] transition-colors" title="Spotify">
                 <Image src="/spotify.svg" alt="Spotify" width="30" height="30" />
               </a>
-              <a href="#" className="hover:text-[#a00c30] transition-colors" title="Apple Music">
-                <Image src="/applemusic.svg" alt="Apple Music" width="30" height="30" />
-              </a>
             </div>
             <p className="text-xs text-gray-600 font-medium">
               © 2026 Bab-Z. All Rights Reserved.
