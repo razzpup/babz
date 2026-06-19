@@ -1,7 +1,7 @@
 'use client';
 
 import { useScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
-import { Music, Play, Share2, MessageCircle, Link as LinkIcon, Menu, X, ArrowRight, MapPin, Mail } from 'lucide-react';
+import { Music, Play, Menu, X, ArrowRight, MapPin, Mail } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { Archivo, Space_Grotesk, Lato } from 'next/font/google';
 import VideoPlayer from './components/VideoPlayer';
@@ -174,20 +174,6 @@ export default function Home() {
           
         </div>
        
-        {/* Social Sidebar */}
-        <div className="absolute left-6 bottom-10 hidden lg:flex flex-col gap-6 z-20">
-          {[Share2, MessageCircle, LinkIcon].map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="text-gray-500 hover:text-[#c71940] transition-colors"
-            >
-              <Icon size={20} />
-            </a>
-          ))}
-          <div className="w-px h-20 bg-linear-to-b from-[#c71940] to-transparent mx-auto mt-2" />
-        </div>
-
         {/* Bottom Left BAB-Z */}
         <div className="hidden absolute bottom-14 left-16 z-20 md:block">
           <div className={`text-4xl md:text-6xl py-2 font-black text-center tracking-tighter ${lato.className}`}>
